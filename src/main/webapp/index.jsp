@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@page import="java.util.Calendar"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,6 +42,32 @@
 		Página foi acessada:
 		<%=++cont%>
 	</h1>
+	<br>
+	<%--ULTIMA PARTE DO EXERCICIO--%>
+
+ <%! Calendar cal = Calendar.getInstance(); %> 
+ 
+ <%! Integer segundos(){
+ 	
+ 	return cal.get(Calendar.SECOND); 
+ }
+ %>
+ 
+ 
+ <h1> <%
+ 	if (segundos()%2 == 0){
+ 		out.println(" Segundo par");
+ 	}else{
+ 		out.println(" Segundo impar");
+ 	}
+ %> </h1>
+
+ 
+<h1> <%=
+	segundos() 	
+ %> </h1>
+
+	}
 
 </body>
 </html>
