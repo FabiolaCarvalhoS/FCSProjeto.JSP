@@ -13,9 +13,9 @@
 
 	<%!boolean formatar = true;%>
 	<%!String today() {
-		java.text.SimpleDateFormat dt = new java.text.SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
-		return dt.format(new java.util.Date());
-	}%>
+	java.text.SimpleDateFormat dt = new java.text.SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+	return dt.format(new java.util.Date());
+}%>
 
 	<h1>
 		A data de hoje é:
@@ -34,6 +34,13 @@
 	%>
 	</h1>
 	<br>
+
+	<%--SEGUNDA PARTE DO EXERCICIO --%>
+	<%!int cont = 0;%>
+	<h1>
+		Página foi acessada:
+		<%=++cont%>
+	</h1>
 
 </body>
 </html>
